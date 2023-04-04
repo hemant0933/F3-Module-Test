@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+fieldset{
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.main-wrapper{
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#current-image-container{
+    image-rendering: optimizeQuality;
+}
+#search-form{
+    font-size: 25px;
+}
+.content-wrapper{
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+}
+#search-history{
+    list-style-type: none;
+} 

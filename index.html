@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Hemant Kumar||F3||Module-test</title>
+  
+</head>
+<body>
+    
+    <div class="main-wrapper">
+        <div class="img-wrapper">
+            <h1 id="image-title"></h1><br><br>
+            <div id="current-image-container">
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <h2 class="header-text">Search for a Picture of the Day</h2><br>
+           <fieldset>
+            <form id="search-form">
+                <label for="">Select a date:</label><br><br>
+                <input type="date" id="search-input" width="50px" height="50px"><br><br>
+                <button type="button" id="search-btn">Search</button><br><br>
+                <button type="button" onclick="clearSearchHistory()">clear</button>
+                 </form>
+           </fieldset><br><br>
+            <div class="history-list">
+                <h2>Previous Search</h2><br><br>
+            <ul id="search-history">
+                
+               
+              </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js" async defer></script>
+</body>
+</html>
