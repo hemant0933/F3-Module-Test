@@ -14,11 +14,12 @@ function getCurrentImageOfTheDay(){
     // Get the image URL and title from the API response
     const imageUrl = data.url;
     const title = data.title;
-
+    const info = data.explanation;
     // Update the UI with the image and title
     const imageElement = document.getElementById('current-image-container');
     imageElement.innerHTML = `<img src=${imageUrl} alt=${title} width='100%'>`
     document.getElementById('image-title').innerText = `${title}`;
+    document.getElementById('info').innerText = `${info}`;
   })
   .catch(error => console.error(error));
 }
@@ -33,13 +34,16 @@ function getImageOfTheDay(){
   .then(response => response.json())
   .then(data => {
     // Get the image URL and title from the API response
+    // console.log(data.explanation);
     const imageUrl = data.url;
+    const info = data.explanation;
     const title = data.title;
 
     // Update the UI with the image and title
     const imageElement = document.getElementById('current-image-container');
     imageElement.innerHTML = `<img src=${imageUrl} alt=${title} width='100%'>`
     document.getElementById('image-title').innerText = `${title}`;
+    document.getElementById('info').innerText = `${info}`;
   })
   .catch(error => console.error(error));
   saveSearch(inputDate);
@@ -60,7 +64,7 @@ function addSearchToHistory(){
     let ulContainer = document.getElementById('search-history');
     ulContainer.innerHTML  = '';
     for(let i=0;i<arr.length;i++){
-        ulContainer.innerHTML += `<li>${arr[i]}</li>`;
+        ulContainer.innerHTML += `<li class='prevDate'>${arr[i]}</li>`;
     }
 }
 
